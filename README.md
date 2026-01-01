@@ -16,11 +16,7 @@
 
 ## 🛠 Installation
 
-1. Clone or download this repository:
-
-```bash
-git clone https://github.com/yourusername/little-scars.git
-Open the project in Unity Hub (Unity version >= 2023.x recommended).
+1. Clone or download this repository
 
 Play the game at
 Final Year Project 2.5D.exe
