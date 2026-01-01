@@ -1,0 +1,65 @@
+{
+  "id": "ms_stage05",
+  "nodes": [
+    {
+      "id": "start",
+      "speaker": "Narrator",
+      "layout": "narration",
+      "text": "At home, your parents ask about school — sometimes their questions sound like pressure to be perfect.",
+      "nextNodeId": "home"
+    },
+    {
+      "id": "home",
+      "speaker": "Player",
+      "layout": "left",
+      "expression": "worried",
+      "text": "They want good grades, but I also want to enjoy things. How do I tell them?",
+      "nextNodeId": "choice"
+    },
+    {
+      "id": "choice",
+      "speaker": "Player",
+      "layout": "left",
+      "expression": "neutral",
+      "text": "Pick a way to respond.",
+      "choices": [
+        {
+          "text": "Explain your worries and ask for space.",
+          "nextNodeId": "explain",
+          "confidence": 2,
+          "empathy": 0,
+          "stress": -1
+        },
+        {
+          "text": "Promise to try harder to calm them down.",
+          "nextNodeId": "promise",
+          "confidence": -1,
+          "empathy": 1,
+          "stress": 1
+        }
+      ]
+    },
+    {
+      "id": "explain",
+      "speaker": "Narrator",
+      "layout": "narration",
+      "text": "Your parents are quiet at first, then open a conversation. It’s not perfect, but you’re heard.",
+      "nextNodeId": "end"
+    },
+    {
+      "id": "promise",
+      "speaker": "Narrator",
+      "layout": "narration",
+      "text": "They relax, but you feel the weight of a promise you didn’t choose fully yourself.",
+      "nextNodeId": "end"
+    },
+    {
+      "id": "end",
+      "speaker": "Player",
+      "layout": "left",
+      "expression": "neutral",
+      "text": "Family wants the best, but my path matters too. I can try to balance both.",
+      "endDialogue": true
+    }
+  ]
+}

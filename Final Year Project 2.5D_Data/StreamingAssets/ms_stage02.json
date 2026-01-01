@@ -1,0 +1,79 @@
+{
+  "id": "ms_stage02",
+  "nodes": [
+    {
+      "id": "start",
+      "speaker": "Narrator",
+      "layout": "narration",
+      "text": "A classmate who used to be friendly has started excluding you from a group project.",
+      "nextNodeId": "feel"
+    },
+    {
+      "id": "feel",
+      "speaker": "Player",
+      "layout": "left",
+      "expression": "sad",
+      "text": "I did my part during practice, but now they split tasks without me.",
+      "nextNodeId": "respond_choice"
+    },
+    {
+      "id": "respond_choice",
+      "speaker": "Player",
+      "layout": "left",
+      "expression": "angry",
+      "text": "What should I do?",
+      "choices": [
+        {
+          "text": "Talk to them calmly and ask why.",
+          "nextNodeId": "ask",
+          "confidence": 2,
+          "empathy": 1,
+          "stress": 0
+        },
+        {
+          "text": "Complain to other classmates.",
+          "nextNodeId": "complain",
+          "confidence": -1,
+          "empathy": 0,
+          "stress": 1
+        },
+        {
+          "text": "Accept it and find someone else to work with.",
+          "nextNodeId": "find_other",
+          "confidence": 1,
+          "empathy": 0,
+          "stress": 0
+        }
+      ]
+    },
+    {
+      "id": "ask",
+      "speaker": "Narrator",
+      "layout": "narration",
+      "text": "They apologize; it turns out a misunderstanding caused the split. You clear the air.",
+      "nextNodeId": "end"
+    },
+    {
+      "id": "complain",
+      "speaker": "Narrator",
+      "layout": "narration",
+      "text": "Gossip starts. You feel a little worse — the problem grows instead of shrinking.",
+      "nextNodeId": "end"
+    },
+    {
+      "id": "find_other",
+      "speaker": "Narrator",
+      "layout": "narration",
+      "text": "You team up with someone else who appreciates your effort. The project goes smoothly.",
+      "nextNodeId": "end"
+    },
+    {
+      "id": "end",
+      "speaker": "Player",
+      "layout": "left",
+      "expression": "neutral",
+      "text": "Relationships shift. What matters is how I respond and where I put my energy.",
+      "endDialogue": true
+    }
+  ]
+}

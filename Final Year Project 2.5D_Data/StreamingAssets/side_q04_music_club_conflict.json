@@ -1,0 +1,72 @@
+{
+  "id": "side_q04_music_club_conflict",
+  "nodes": [
+    {
+      "id": "start",
+      "speaker": "Sam",
+      "layout": "right",
+      "expression": "angry",
+      "text": "The music club leader keeps changing practice times without asking. People are upset and attendance drops.",
+      "nextNodeId": "help_choice"
+    },
+    {
+      "id": "help_choice",
+      "speaker": "Player",
+      "layout": "left",
+      "expression": "neutral",
+      "text": "Do you mediate, collect everyone's preferred times, or talk privately with the leader?",
+      "choices": [
+        {
+          "text": "Host a short meeting to collect everyone's availability.",
+          "nextNodeId": "survey",
+          "confidence": 1,
+          "empathy": 2,
+          "stress": 0
+        },
+        {
+          "text": "Talk to the leader privately and explain the hurt this causes.",
+          "nextNodeId": "talk_leader",
+          "confidence": 2,
+          "empathy": 1,
+          "stress": 1
+        },
+        {
+          "text": "Encourage club members to vote for fixed times.",
+          "nextNodeId": "vote",
+          "confidence": 1,
+          "empathy": 1,
+          "stress": 0
+        }
+      ]
+    },
+    {
+      "id": "survey",
+      "speaker": "Narrator",
+      "layout": "narration",
+      "text": "You gather input and present options. The leader agrees to a schedule that fits most members.",
+      "nextNodeId": "closing"
+    },
+    {
+      "id": "talk_leader",
+      "speaker": "Narrator",
+      "layout": "narration",
+      "text": "The leader listens and apologizes for not consulting the group. Practices become steadier.",
+      "nextNodeId": "closing"
+    },
+    {
+      "id": "vote",
+      "speaker": "Narrator",
+      "layout": "narration",
+      "text": "Members vote and a majority wins. The club feels more democratic and people return.",
+      "nextNodeId": "closing"
+    },
+    {
+      "id": "closing",
+      "speaker": "Sam",
+      "layout": "right",
+      "expression": "happy",
+      "text": "Thanks for helping. Practice is better now and people seem happier.",
+      "endDialogue": true
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "id": "ms_stage01",
+  "nodes": [
+    {
+      "id": "start",
+      "speaker": "Narrator",
+      "layout": "narration",
+      "text": "School is a place you know, but some days the hallways feel heavier than usual.",
+      "nextNodeId": "morning"
+    },
+    {
+      "id": "morning",
+      "speaker": "Player",
+      "layout": "left",
+      "expression": "neutral",
+      "text": "I've been here a while — I know the routes, the teachers, even the old oak by the playground.",
+      "nextNodeId": "notice"
+    },
+    {
+      "id": "notice",
+      "speaker": "Narrator",
+      "layout": "narration",
+      "text": "Today you notice a whispering circle near your locker. A paper is being passed around.",
+      "nextNodeId": "approach_choice"
+    },
+    {
+      "id": "approach_choice",
+      "speaker": "Player",
+      "layout": "left",
+      "expression": "worried",
+      "text": "Do you ignore it, check what they're saying, or ask a friend for help?",
+      "choices": [
+        {
+          "text": "Ignore it — staying out might keep things calm.",
+          "nextNodeId": "ignore",
+          "confidence": -1,
+          "empathy": 0,
+          "stress": 1
+        },
+        {
+          "text": "Quietly ask a friend what’s happening.",
+          "nextNodeId": "ask_friend",
+          "confidence": 0,
+          "empathy": 2,
+          "stress": 0
+        },
+        {
+          "text": "Go over and ask them directly.",
+          "nextNodeId": "confront",
+          "confidence": 2,
+          "empathy": 0,
+          "stress": 1
+        }
+      ]
+    },
+    {
+      "id": "ignore",
+      "speaker": "Narrator",
+      "layout": "narration",
+      "text": "You keep your distance. Later you wonder if you could have helped someone who needed it.",
+      "nextNodeId": "end"
+    },
+    {
+      "id": "ask_friend",
+      "speaker": "Narrator",
+      "layout": "narration",
+      "text": "Your friend whispers that a rumor might be spreading. They look worried too.",
+      "nextNodeId": "end"
+    },
+    {
+      "id": "confront",
+      "speaker": "Narrator",
+      "layout": "narration",
+      "text": "They shrink away when you ask. The circle dissolves, and someone drops the paper. The moment is awkward but it stops.",
+      "nextNodeId": "end"
+    },
+    {
+      "id": "end",
+      "speaker": "Player",
+      "layout": "left",
+      "expression": "neutral",
+      "text": "Sometimes small choices change the day. I don't have to solve everything at once.",
+      "endDialogue": true
+    }
+  ]
+}

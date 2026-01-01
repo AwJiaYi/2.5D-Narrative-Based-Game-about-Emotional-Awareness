@@ -1,0 +1,72 @@
+{
+  "id": "side_q05_future_confusion",
+  "nodes": [
+    {
+      "id": "start",
+      "speaker": "Ethan",
+      "layout": "right",
+      "expression": "sad",
+      "text": "Everyone around me already knows what they want to be. I feel like I'm falling behind.",
+      "nextNodeId": "player_response"
+    },
+    {
+      "id": "player_response",
+      "speaker": "Player",
+      "layout": "left",
+      "expression": "neutral",
+      "text": "What worries you the most right now?",
+      "choices": [
+        {
+          "text": "Help him reflect on what he actually enjoys.",
+          "nextNodeId": "reflect_interests",
+          "confidence": 0,
+          "empathy": 3,
+          "stress": -1
+        },
+        {
+          "text": "Tell him it's okay not to know yet.",
+          "nextNodeId": "normalize_confusion",
+          "confidence": 1,
+          "empathy": 1,
+          "stress": 0
+        },
+        {
+          "text": "Encourage him to compare less and focus on himself.",
+          "nextNodeId": "stop_comparing",
+          "confidence": 2,
+          "empathy": 0,
+          "stress": 0
+        }
+      ]
+    },
+    {
+      "id": "reflect_interests",
+      "speaker": "Narrator",
+      "layout": "narration",
+      "text": "You ask Ethan about moments when he feels curious or absorbed. Slowly, he starts listing things he enjoys.",
+      "nextNodeId": "closing"
+    },
+    {
+      "id": "normalize_confusion",
+      "speaker": "Narrator",
+      "layout": "narration",
+      "text": "You remind Ethan that many people discover their path later than they expect. He exhales in relief.",
+      "nextNodeId": "closing"
+    },
+    {
+      "id": "stop_comparing",
+      "speaker": "Narrator",
+      "layout": "narration",
+      "text": "You point out that comparison hides effort and failure. Ethan nods, realizing he's been too hard on himself.",
+      "nextNodeId": "closing"
+    },
+    {
+      "id": "closing",
+      "speaker": "Ethan",
+      "layout": "right",
+      "expression": "neutral",
+      "text": "I guess… I don't need all the answers yet. Thanks for helping me slow down and think.",
+      "endDialogue": true
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "id": "side_q01_presentation_anxiety",
+  "nodes": [
+    {
+      "id": "start",
+      "speaker": "Lily",
+      "layout": "right",
+      "expression": "sad",
+      "text": "Hey... can I bother you? I have to give a presentation tomorrow and I'm really nervous.",
+      "nextNodeId": "offer_help"
+    },
+    {
+      "id": "offer_help",
+      "speaker": "Player",
+      "layout": "left",
+      "expression": "neutral",
+      "text": "Do you want help practicing, or some tips to calm down?",
+      "choices": [
+        {
+          "text": "Practice the presentation with her.",
+          "nextNodeId": "practice",
+          "confidence": 0,
+          "empathy": 3,
+          "stress": 0
+        },
+        {
+          "text": "Give her breathing and focus tips, then encourage her.",
+          "nextNodeId": "tips",
+          "confidence": 0,
+          "empathy": 2,
+          "stress": -1
+        },
+        {
+          "text": "Tell her it's probably fine and she'll be okay.",
+          "nextNodeId": "reassure",
+          "confidence": 1,
+          "empathy": 0,
+          "stress": 0
+        }
+      ]
+    },
+    {
+      "id": "practice",
+      "speaker": "Narrator",
+      "layout": "narration",
+      "text": "You run through the slides with Lily and give gentle feedback. Her voice grows steadier.",
+      "nextNodeId": "closing"
+    },
+    {
+      "id": "tips",
+      "speaker": "Narrator",
+      "layout": "narration",
+      "text": "You show her two breathing exercises and how to anchor with a confident posture. She thanks you and smiles faintly.",
+      "nextNodeId": "closing"
+    },
+    {
+      "id": "reassure",
+      "speaker": "Narrator",
+      "layout": "narration",
+      "text": "Your reassurance helps, but Lily still seems uncertain — still, she nods appreciatively.",
+      "nextNodeId": "closing"
+    },
+    {
+      "id": "closing",
+      "speaker": "Lily",
+      "layout": "right",
+      "expression": "happy",
+      "text": "Thank you — I feel a lot better. I'll try the breathing first thing tomorrow.",
+      "endDialogue": true
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+{
+  "id": "ms_stage07",
+  "nodes": [
+    {
+      "id": "start",
+      "speaker": "Narrator",
+      "layout": "narration",
+      "text": "A new social circle pushes limits — jokes that feel mean, dares that pressure you.",
+      "nextNodeId": "peer"
+    },
+    {
+      "id": "peer",
+      "speaker": "Player",
+      "layout": "left",
+      "expression": "worried",
+      "text": "They ask you to join in. Do you go along, step back, or call it out?",
+      "nextNodeId": "choices"
+    },
+    {
+      "id": "choices",
+      "speaker": "Player",
+      "layout": "left",
+      "expression": "neutral",
+      "text": "Choose.",
+      "choices": [
+        {
+          "text": "Join in — it feels easier.",
+          "nextNodeId": "join",
+          "confidence": 0,
+          "empathy": -2,
+          "stress": 1
+        },
+        {
+          "text": "Politely step away and don't participate.",
+          "nextNodeId": "step_back",
+          "confidence": 2,
+          "empathy": 1,
+          "stress": 0
+        },
+        {
+          "text": "Call them out and say it's not okay.",
+          "nextNodeId": "call_out",
+          "confidence": 3,
+          "empathy": 2,
+          "stress": 1
+        }
+      ]
+    },
+    {
+      "id": "join",
+      "speaker": "Narrator",
+      "layout": "narration",
+      "text": "You feel a short burst of belonging, followed by a quiet regret.",
+      "nextNodeId": "end"
+    },
+    {
+      "id": "step_back",
+      "speaker": "Narrator",
+      "layout": "narration",
+      "text": "A few notice and respect your boundary; some drift away, but you feel steadier.",
+      "nextNodeId": "end"
+    },
+    {
+      "id": "call_out",
+      "speaker": "Narrator",
+      "layout": "narration",
+      "text": "It's uncomfortable, but some peers think and later apologize. You earn respect and a cost.",
+      "nextNodeId": "end"
+    },
+    {
+      "id": "end",
+      "speaker": "Player",
+      "layout": "left",
+      "expression": "neutral",
+      "text": "Fitting in can ask for compromises. Standing up for what feels right shapes who you are.",
+      "endDialogue": true
+    }
+  ]
+}
