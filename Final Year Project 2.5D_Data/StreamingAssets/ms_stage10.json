@@ -1,0 +1,79 @@
+{
+  "id": "ms_stage10",
+  "nodes": [
+    {
+      "id": "start",
+      "speaker": "Narrator",
+      "layout": "narration",
+      "text": "A school fair asks students to display a vision board: 'What will you be in five years?' The question feels enormous.",
+      "nextNodeId": "vision"
+    },
+    {
+      "id": "vision",
+      "speaker": "Player",
+      "layout": "left",
+      "expression": "worried",
+      "text": "I don't know yet. How do I answer without sounding lost?",
+      "nextNodeId": "choice"
+    },
+    {
+      "id": "choice",
+      "speaker": "Player",
+      "layout": "left",
+      "expression": "neutral",
+      "text": "Pick how to approach the board.",
+      "choices": [
+        {
+          "text": "Write a clear career goal to feel secure.",
+          "nextNodeId": "goal",
+          "confidence": 1,
+          "empathy": 0,
+          "stress": 1
+        },
+        {
+          "text": "Write values and things you enjoy instead of a job.",
+          "nextNodeId": "values",
+          "confidence": 1,
+          "empathy": 2,
+          "stress": 0
+        },
+        {
+          "text": "Leave it blank and admit I don't know.",
+          "nextNodeId": "blank",
+          "confidence": -1,
+          "empathy": 0,
+          "stress": 1
+        }
+      ]
+    },
+    {
+      "id": "goal",
+      "speaker": "Narrator",
+      "layout": "narration",
+      "text": "You feel focused but also boxed in. Some classmates admire your clarity.",
+      "nextNodeId": "end"
+    },
+    {
+      "id": "values",
+      "speaker": "Narrator",
+      "layout": "narration",
+      "text": "Your board shows curiosity, kindness, creativity. Teachers nod approvingly — it feels honest.",
+      "nextNodeId": "end"
+    },
+    {
+      "id": "blank",
+      "speaker": "Narrator",
+      "layout": "narration",
+      "text": "Someone whispers, but an older student says it's okay not to know. You feel a little lighter.",
+      "nextNodeId": "end"
+    },
+    {
+      "id": "end",
+      "speaker": "Player",
+      "layout": "left",
+      "expression": "neutral",
+      "text": "The future is a series of small steps. Being curious now matters more than having it all figured out.",
+      "endDialogue": true
+    }
+  ]
+}

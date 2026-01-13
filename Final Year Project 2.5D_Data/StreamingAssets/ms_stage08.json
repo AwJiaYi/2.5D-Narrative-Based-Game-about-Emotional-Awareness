@@ -1,0 +1,79 @@
+{
+  "id": "ms_stage08",
+  "nodes": [
+    {
+      "id": "start",
+      "speaker": "Narrator",
+      "layout": "narration",
+      "text": "Homework multiplies and tests come more often. Nights feel shorter and thoughts chase each other.",
+      "nextNodeId": "balance"
+    },
+    {
+      "id": "balance",
+      "speaker": "Player",
+      "layout": "left",
+      "expression": "worried",
+      "text": "How do I keep up without burning out?",
+      "nextNodeId": "choices"
+    },
+    {
+      "id": "choices",
+      "speaker": "Player",
+      "layout": "left",
+      "expression": "neutral",
+      "text": "Choose a strategy.",
+      "choices": [
+        {
+          "text": "Set a strict study schedule and reduce fun time.",
+          "nextNodeId": "schedule",
+          "confidence": 2,
+          "empathy": 0,
+          "stress": 1
+        },
+        {
+          "text": "Ask teachers for help and plan study groups.",
+          "nextNodeId": "ask_help",
+          "confidence": 1,
+          "empathy": 2,
+          "stress": -1
+        },
+        {
+          "text": "Ignore some assignments and hope for the best.",
+          "nextNodeId": "ignore",
+          "confidence": -2,
+          "empathy": 0,
+          "stress": 2
+        }
+      ]
+    },
+    {
+      "id": "schedule",
+      "speaker": "Narrator",
+      "layout": "narration",
+      "text": "You gain control but sacrifice downtime. It works short term but feels heavy.",
+      "nextNodeId": "end"
+    },
+    {
+      "id": "ask_help",
+      "speaker": "Narrator",
+      "layout": "narration",
+      "text": "Teachers and friends help. Tasks become manageable and you learn better ways.",
+      "nextNodeId": "end"
+    },
+    {
+      "id": "ignore",
+      "speaker": "Narrator",
+      "layout": "narration",
+      "text": "Falling behind increases anxiety. You realize avoidance costs more later.",
+      "nextNodeId": "end"
+    },
+    {
+      "id": "end",
+      "speaker": "Player",
+      "layout": "left",
+      "expression": "neutral",
+      "text": "Pressure is real, but asking for help and pacing myself keeps me growing, not breaking.",
+      "endDialogue": true
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "id": "side_q03_home_stress",
+  "nodes": [
+    {
+      "id": "start",
+      "speaker": "Aisha",
+      "layout": "right",
+      "expression": "worried",
+      "text": "My parents argue a lot about money. I can’t focus on homework when that’s happening.",
+      "nextNodeId": "comfort_choice"
+    },
+    {
+      "id": "comfort_choice",
+      "speaker": "Player",
+      "layout": "left",
+      "expression": "neutral",
+      "text": "Do you want me to listen now, help you make a short plan for homework, or find an adult who can help?",
+      "choices": [
+        {
+          "text": "Listen — sometimes I just need someone to hear me.",
+          "nextNodeId": "listen",
+          "confidence": 0,
+          "empathy": 3,
+          "stress": -1
+        },
+        {
+          "text": "Let's make a small homework plan you can follow in quiet moments.",
+          "nextNodeId": "plan",
+          "confidence": 1,
+          "empathy": 1,
+          "stress": 0
+        },
+        {
+          "text": "We can find a counselor or teacher to talk to.",
+          "nextNodeId": "find_adult",
+          "confidence": 0,
+          "empathy": 2,
+          "stress": -1
+        }
+      ]
+    },
+    {
+      "id": "listen",
+      "speaker": "Narrator",
+      "layout": "narration",
+      "text": "You sit with Aisha as she speaks. The simple act of being heard lightens some of the burden.",
+      "nextNodeId": "closing"
+    },
+    {
+      "id": "plan",
+      "speaker": "Narrator",
+      "layout": "narration",
+      "text": "You help Aisha break homework into 20-minute chunks she can do between family tensions.",
+      "nextNodeId": "closing"
+    },
+    {
+      "id": "find_adult",
+      "speaker": "Narrator",
+      "layout": "narration",
+      "text": "You suggest a trusted teacher. Aisha agrees to try speaking to them this week.",
+      "nextNodeId": "closing"
+    },
+    {
+      "id": "closing",
+      "speaker": "Aisha",
+      "layout": "right",
+      "expression": "happy",
+      "text": "Thank you. I feel less alone and I can try the plan tomorrow.",
+      "endDialogue": true
+    }
+  ]
+}

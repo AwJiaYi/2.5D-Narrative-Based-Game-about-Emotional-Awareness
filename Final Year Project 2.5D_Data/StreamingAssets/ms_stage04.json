@@ -1,0 +1,79 @@
+{
+  "id": "ms_stage04",
+  "nodes": [
+    {
+      "id": "start",
+      "speaker": "Narrator",
+      "layout": "narration",
+      "text": "A close friend starts spending time with someone else and you feel left behind.",
+      "nextNodeId": "hurt"
+    },
+    {
+      "id": "hurt",
+      "speaker": "Player",
+      "layout": "left",
+      "expression": "sad",
+      "text": "Do I talk to them or keep quiet?",
+      "nextNodeId": "choice"
+    },
+    {
+      "id": "choice",
+      "speaker": "Player",
+      "layout": "left",
+      "expression": "neutral",
+      "text": "Choose an approach.",
+      "choices": [
+        {
+          "text": "Tell them how you feel honestly.",
+          "nextNodeId": "honest",
+          "confidence": 2,
+          "empathy": 1,
+          "stress": 0
+        },
+        {
+          "text": "Act jealous and try to prove you're better.",
+          "nextNodeId": "jealous",
+          "confidence": -1,
+          "empathy": -1,
+          "stress": 1
+        },
+        {
+          "text": "Find new friends and broaden your circle.",
+          "nextNodeId": "newfriends",
+          "confidence": 1,
+          "empathy": 0,
+          "stress": 0
+        }
+      ]
+    },
+    {
+      "id": "honest",
+      "speaker": "Narrator",
+      "layout": "narration",
+      "text": "They appreciate your honesty; you talk and understand each other better.",
+      "nextNodeId": "end"
+    },
+    {
+      "id": "jealous",
+      "speaker": "Narrator",
+      "layout": "narration",
+      "text": "The drama causes more distance. You feel worse and realize the cost of acting out.",
+      "nextNodeId": "end"
+    },
+    {
+      "id": "newfriends",
+      "speaker": "Narrator",
+      "layout": "narration",
+      "text": "You meet others with shared interests. You feel lighter meeting new people.",
+      "nextNodeId": "end"
+    },
+    {
+      "id": "end",
+      "speaker": "Player",
+      "layout": "left",
+      "expression": "neutral",
+      "text": "Friendship changes. Saying what I feel matters, but so does finding people who match who I am.",
+      "endDialogue": true
+    }
+  ]
+}

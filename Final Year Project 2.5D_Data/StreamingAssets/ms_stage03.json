@@ -1,0 +1,79 @@
+{
+  "id": "ms_stage03",
+  "nodes": [
+    {
+      "id": "start",
+      "speaker": "Narrator",
+      "layout": "narration",
+      "text": "Someone leaves a hurtful note in your locker. It stings more because it was anonymous.",
+      "nextNodeId": "reaction"
+    },
+    {
+      "id": "reaction",
+      "speaker": "Player",
+      "layout": "left",
+      "expression": "sad",
+      "text": "Why would someone do this? Should I tell a teacher?",
+      "nextNodeId": "action_choice"
+    },
+    {
+      "id": "action_choice",
+      "speaker": "Player",
+      "layout": "left",
+      "expression": "angry",
+      "text": "How do you respond?",
+      "choices": [
+        {
+          "text": "Show it to a teacher and ask for help.",
+          "nextNodeId": "teacher_help",
+          "confidence": 3,
+          "empathy": 0,
+          "stress": -1
+        },
+        {
+          "text": "Confront people you suspect.",
+          "nextNodeId": "confront",
+          "confidence": 1,
+          "empathy": 0,
+          "stress": 1
+        },
+        {
+          "text": "Ignore it and keep it to yourself.",
+          "nextNodeId": "ignore",
+          "confidence": -2,
+          "empathy": 0,
+          "stress": 2
+        }
+      ]
+    },
+    {
+      "id": "teacher_help",
+      "speaker": "Narrator",
+      "layout": "narration",
+      "text": "The teacher listens and takes steps to stop the behavior. You feel safer but still shaken.",
+      "nextNodeId": "end"
+    },
+    {
+      "id": "confront",
+      "speaker": "Narrator",
+      "layout": "narration",
+      "text": "The person denies it; the moment becomes tense. You feel both relief and regret afterward.",
+      "nextNodeId": "end"
+    },
+    {
+      "id": "ignore",
+      "speaker": "Narrator",
+      "layout": "narration",
+      "text": "Keeping it inside makes it heavier. Later someone close notices your mood and asks about it.",
+      "nextNodeId": "end"
+    },
+    {
+      "id": "end",
+      "speaker": "Player",
+      "layout": "left",
+      "expression": "neutral",
+      "text": "Asking for help doesn't make me weak. Choosing who to trust matters.",
+      "endDialogue": true
+    }
+  ]
+}

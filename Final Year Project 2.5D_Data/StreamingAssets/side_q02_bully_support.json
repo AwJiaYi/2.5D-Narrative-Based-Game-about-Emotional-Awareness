@@ -1,0 +1,72 @@
+{
+  "id": "side_q02_bully_support",
+  "nodes": [
+    {
+      "id": "start",
+      "speaker": "Marcus",
+      "layout": "right",
+      "expression": "sad",
+      "text": "They keep pushing my locker and laughing. I'm not sure why they're picking on me.",
+      "nextNodeId": "ask_action"
+    },
+    {
+      "id": "ask_action",
+      "speaker": "Player",
+      "layout": "left",
+      "expression": "neutral",
+      "text": "Do you want me to come with you to tell a teacher, or would you rather handle it yourself?",
+      "choices": [
+        {
+          "text": "I'll go with you to tell a teacher.",
+          "nextNodeId": "report",
+          "confidence": 1,
+          "empathy": 3,
+          "stress": -1
+        },
+        {
+          "text": "Teach you a few assertive phrases you can use.",
+          "nextNodeId": "assert",
+          "confidence": 2,
+          "empathy": 1,
+          "stress": 0
+        },
+        {
+          "text": "Help you avoid them and find quiet routes.",
+          "nextNodeId": "avoid",
+          "confidence": 0,
+          "empathy": 1,
+          "stress": 1
+        }
+      ]
+    },
+    {
+      "id": "report",
+      "speaker": "Narrator",
+      "layout": "narration",
+      "text": "You accompany Marcus to the teacher and explain what happened. The teacher promises to watch and intervene.",
+      "nextNodeId": "closing"
+    },
+    {
+      "id": "assert",
+      "speaker": "Narrator",
+      "layout": "narration",
+      "text": "You practice short, calm lines with Marcus. He tries them the next day and one bully backs off.",
+      "nextNodeId": "closing"
+    },
+    {
+      "id": "avoid",
+      "speaker": "Narrator",
+      "layout": "narration",
+      "text": "You find alternate paths for Marcus for a few days. It helps reduce encounters quickly.",
+      "nextNodeId": "closing"
+    },
+    {
+      "id": "closing",
+      "speaker": "Marcus",
+      "layout": "right",
+      "expression": "neutral",
+      "text": "Thanks. It feels less lonely knowing someone cares. I'll try talking to the teacher if it happens again.",
+      "endDialogue": true
+    }
+  ]
+}

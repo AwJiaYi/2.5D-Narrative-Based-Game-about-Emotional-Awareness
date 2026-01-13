@@ -1,0 +1,79 @@
+{
+  "id": "ms_stage06",
+  "nodes": [
+    {
+      "id": "start",
+      "speaker": "Narrator",
+      "layout": "narration",
+      "text": "Middle school brings new routines: lockers, new teachers, and a feed full of other people's highlights.",
+      "nextNodeId": "scroll"
+    },
+    {
+      "id": "scroll",
+      "speaker": "Player",
+      "layout": "left",
+      "expression": "sad",
+      "text": "It’s hard not to compare. Everyone seems to have a highlight-reel.",
+      "nextNodeId": "response_choice"
+    },
+    {
+      "id": "response_choice",
+      "speaker": "Player",
+      "layout": "left",
+      "expression": "neutral",
+      "text": "What will you do?",
+      "choices": [
+        {
+          "text": "Take a break from the feed for a day.",
+          "nextNodeId": "break",
+          "confidence": 1,
+          "empathy": 0,
+          "stress": -1
+        },
+        {
+          "text": "Post something too and watch reactions.",
+          "nextNodeId": "post",
+          "confidence": 1,
+          "empathy": 0,
+          "stress": 1
+        },
+        {
+          "text": "Message a friend and ask how they really feel.",
+          "nextNodeId": "message",
+          "confidence": 0,
+          "empathy": 3,
+          "stress": -1
+        }
+      ]
+    },
+    {
+      "id": "break",
+      "speaker": "Narrator",
+      "layout": "narration",
+      "text": "A break helps — the noise quiets and you breathe a bit easier.",
+      "nextNodeId": "end"
+    },
+    {
+      "id": "post",
+      "speaker": "Narrator",
+      "layout": "narration",
+      "text": "Replies come and go. Validation fades, but you learn what posting really costs.",
+      "nextNodeId": "end"
+    },
+    {
+      "id": "message",
+      "speaker": "Narrator",
+      "layout": "narration",
+      "text": "Your friend admits they feel the same. You both decide to limit scrolling together.",
+      "nextNodeId": "end"
+    },
+    {
+      "id": "end",
+      "speaker": "Player",
+      "layout": "left",
+      "expression": "neutral",
+      "text": "Online life is edited. Real talks with friends help more than feeds.",
+      "endDialogue": true
+    }
+  ]
+}

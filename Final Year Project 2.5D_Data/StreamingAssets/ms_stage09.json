@@ -1,0 +1,79 @@
+{
+  "id": "ms_stage09",
+  "nodes": [
+    {
+      "id": "start",
+      "speaker": "Narrator",
+      "layout": "narration",
+      "text": "Choice points appear: electives, clubs, the kind of classes you take. It feels heavy to pick.",
+      "nextNodeId": "decide"
+    },
+    {
+      "id": "decide",
+      "speaker": "Player",
+      "layout": "left",
+      "expression": "neutral",
+      "text": "Do I follow what others choose, pick what's safe, or follow curiosity?",
+      "nextNodeId": "choices"
+    },
+    {
+      "id": "choices",
+      "speaker": "Player",
+      "layout": "left",
+      "expression": "neutral",
+      "text": "Choose a path.",
+      "choices": [
+        {
+          "text": "Do what most friends choose so I don't stand out.",
+          "nextNodeId": "follow",
+          "confidence": 0,
+          "empathy": -1,
+          "stress": 1
+        },
+        {
+          "text": "Pick safe, predictable choices to avoid risk.",
+          "nextNodeId": "safe",
+          "confidence": -1,
+          "empathy": 0,
+          "stress": 1
+        },
+        {
+          "text": "Try something that genuinely interests me, even if it's odd.",
+          "nextNodeId": "curious",
+          "confidence": 2,
+          "empathy": 0,
+          "stress": 0
+        }
+      ]
+    },
+    {
+      "id": "follow",
+      "speaker": "Narrator",
+      "layout": "narration",
+      "text": "You fit in easily but sometimes feel disconnected from what you enjoy.",
+      "nextNodeId": "end"
+    },
+    {
+      "id": "safe",
+      "speaker": "Narrator",
+      "layout": "narration",
+      "text": "Predictability brings comfort, but you wonder what you might miss.",
+      "nextNodeId": "end"
+    },
+    {
+      "id": "curious",
+      "speaker": "Narrator",
+      "layout": "narration",
+      "text": "Trying new things sparks energy. You meet others who share weird interests and feel alive.",
+      "nextNodeId": "end"
+    },
+    {
+      "id": "end",
+      "speaker": "Player",
+      "layout": "left",
+      "expression": "neutral",
+      "text": "Decisions are experiments, not final verdicts. Curiosity keeps options open.",
+      "endDialogue": true
+    }
+  ]
+}
